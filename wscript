@@ -22,9 +22,4 @@ def build(bld):
   obj.cxxflags = ["-D_FILE_OFFSET_BITS=64", "-D_LARGEFILE_SOURCE", "-I/opt/local/include"]
 
 def shutdown():
-  if Options.commands['clean']:
-    if exists('png.node'): unlink('png.node')
-  else:
-    if exists('build/default/png.node') and not exists('png.node'):
-      symlink('build/default/png.node', 'png.node')
-
+  pass
